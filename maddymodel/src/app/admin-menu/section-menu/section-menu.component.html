@@ -1,0 +1,120 @@
+<div style="text-align:center">
+  <h1><br>
+   {{depname}}  Section Menu! 
+  </h1>
+  <h3>
+  	In admin-menu-component/section-menu-component
+  </h3>
+  </div>
+  <div style="text-align:center">
+      <button
+          class="btn btn-primary" 
+          (click)="addSection()">
+          Add Section
+      </button>
+
+      <button
+          class="btn btn-primary" 
+          (click)="viewSection()">
+           View Section 
+      </button>
+
+      <button
+          class="btn btn-primary" 
+          (click)="setSection()">
+           Set Section 
+      </button>
+
+      <button
+          class="btn btn-primary" 
+          (click)="deleteSection()">
+           Delete Section 
+      </button>
+
+</div>
+
+<div style="text-align:center">
+
+  <p *ngIf= addSectionvar >
+    Create Section
+    	  
+        Select sem
+
+    <select [(ngModel)]= "semValue" class="form-group">
+      <option value="sem1">sem1</option>
+      <option value="sem2">sem2</option>
+      <option value="sem3">sem3</option>
+      <option value="sem4">sem4</option>
+      <option value="sem5">sem5</option>
+      <option value="sem6">sem6</option>
+      <option value="sem7">sem7</option>
+      <option value="sem8">sem8</option>
+    </select> 
+
+    	Select section
+    <select [(ngModel)]= "secValue" class="form-group" >
+      <option value="sem1">sec1</option>
+      <option value="sem2">sec2</option>
+      <option value="sem3">sec3</option>
+    </select> 
+
+    <button
+            class="btn btn-primary" 
+            (click)="addSectiondb()">
+             add Section 
+    </button>
+
+  </p>
+  </div>
+
+  <p *ngIf= deleteSectionvar >
+    delete Section
+
+  </p>
+
+  <p *ngIf= viewSectionvar >
+    view Section
+  </p>
+
+ <p style="text-align:center" *ngIf= setSectionvar >
+    set Section Faculty
+
+<select [(ngModel)]= "semValue" class="form-group" (click)="getSubject(semValue)">
+
+    <option value="sem1">sem1</option>
+    <option value="sem2">sem2</option>
+    <option value="sem3">sem3</option>
+    <option value="sem4">sem4</option>
+    <option value="sem5">sem5</option>
+    <option value="sem6">sem6</option>
+    <option value="sem7">sem7</option>
+    <option value="sem8">sem8</option>
+ </select> 
+ <br>
+      Select section 
+  <select [(ngModel)]= "secValue" class="form-group" >
+    <option value="sem1">sec1</option>
+    <option value="sem2">sec2</option>
+    <option value="sem3">sec3</option>
+ </select> 
+ <br>
+
+    <button
+          class="btn btn-primary" 
+          (click)="setSectiondb()>
+          Set Section Faculty
+      </button> <br>
+
+  <span *ngFor="let subject of allSubjects" ng-repeat="item in allSubjects"  >
+{{subject.subname}}: {{subject.subcode}}
+
+  <select [(ngModel)]= "interpretation[$index+1]">
+      <option  *ngFor="let faculty of allFaculty" > {{faculty.name}}
+      </option>
+</select>
+{{interpretation[$index+1]}}
+    <br>
+</span>
+
+  </p>
+

@@ -1,0 +1,50 @@
+<div class="jumbotron" style="text-align: center">
+  <h2>FEEDBACK FORM</h2>
+</div>
+<div class="container" style="text-align:center;">
+    <table class="table table-bordered">
+          <tr>
+            <th rowspan="2">S. NO.</th>
+            <th rowspan="2">QUESTIONS</th>
+            <th>SUB NAME 1</th>
+            <th>SUB NAME 2</th>
+          </tr>
+          <tr>
+              <th>STAFF NAME 1</th>
+              <th>STAFF NAME 2</th>
+          </tr>
+          <tr>
+            <th scope="row">1</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Harry</td>
+            <td>Derono</td>
+            <td>random</td>
+          </tr>
+      </table>
+
+      <div class="container" style="width:15%; height:5%;">
+          <button class="login100-form-btn" routerLink="/login"> 
+            SUBMIT
+          </button>
+      </div>
+</div>
+
+<form>
+  <div class="radio">
+<input type="radio" name="Gender"  [(ngModel)]="male" value="male" required> Male
+<input type="radio" name="Gender" [(ngModel)]="male" value="female"> Female
+{{male}}
+</div>
+
+</form>
